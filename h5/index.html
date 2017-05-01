@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>H5页面</title>
+    <link rel="stylesheet" href="css/combined-b4ec83ba2a.css">
+    <script src="js/combined-e48c80ac07.js"></script>
   </head>
-    <script src="js/combined-8219fd861f.js"></script>
-    <link rel="stylesheet" href="css/combined-ecaa2dfbf5.css">
+
     <style media="screen">
       body{
         padding: 0;
@@ -20,12 +21,12 @@
       }
       .h5_component_name_slogan{
         -webkit-animation:rock 2s infinite ;
-             background-image: url(imgs/face_slogan.png);
+             background-image: url('imgs/face_slogan.png');
 
 
       }
       .h5_component_name_caption{
-        background-image: url(imgs/page_caption_bg.png);
+        background-image: url('imgs/page_caption_bg.png');
         width: 283px;
         height: 160px;
         text-align: center;
@@ -51,8 +52,31 @@
       @-webkit-keyframes back{
           50%{top:50px;}
         }
+        /*.progress{
+          background-color: red;
+          height: 20px;
+          width: 1px;
+
+        }此处为进度条样式*/
     </style>
+    <body>
     <!-- 主要业务逻辑 -->
+    <div class="loading">
+      <div class="loading-bounce1">
+      </div>
+      <div class="loading-bounce2">
+      </div>
+      <div id="rate">
+        0%
+      </div>
+
+
+
+    </div>
+    <!-- <div class="progress"></div> 进度条代码-->
+
+    <script src="js/combineds-b979d5e5c9.js"></script>
+
     <script type="text/javascript">
     $(function(){
       var h5=new H5();
@@ -63,12 +87,12 @@
              width:395,
              height:130,
              bg:'imgs/face_logo.png',
-             css:{opacity:0,top:100},
+             css:{opacity:0,top:0},
              animationIn:{top:100 ,opacity:1},
              animationOut:{top:0,opacity:0}
            })
            .addComponent('slogan',{
-             center:true,
+            center:true,
              width:365,
              height:99,
              css:{opacity:0,top:180},
@@ -479,9 +503,11 @@
 
             })
 
-        .loader(1);
+        .loader(['imgs/page_bg.png','imgs/face_bg.png','imgs/face_slogan.png','imgs/page_caption_bg.png','imgs/face_logo.png','imgs/face_img_left.png','imgs/face_img_right.png','imgs/description_bg.gif','imgs/p1_people.png','imgs/tail_slogan.png','imgs/tail_logo.png','imgs/tail_share.png','imgs/tail_back.png']
+);
     })
     </script>
-  <body>
+
   </body>
+
 </html>
